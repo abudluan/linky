@@ -1,22 +1,29 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import '../styles/NavigationBar.scss';
-import ShinyText from '../anims/ShinyText';
+import SplitText from '../anims/SplitText.jsx';
 import { FaCode } from "react-icons/fa";
 
 const NavigationBar = () => {
   return (
     <Navbar >
       <Container>
-        <Navbar.Brand>Linky</Navbar.Brand>
+        <Navbar.Brand>
+          <SplitText
+            text="Linky"
+            className="navText"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+          />
+        </Navbar.Brand>
         <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            <a href="https://abudluan.vercel.app/" target="_blank" rel="noopener noreferrer" className='codeLink'>
-              <FaCode color='white' size={20} />
-            </a>
-          </Navbar.Text>
-        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
