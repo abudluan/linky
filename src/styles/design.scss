@@ -1,0 +1,40 @@
+.design-container {
+    a{
+        text-decoration: none;
+    }
+
+    .cardSelectedLink {
+        height: 18em;
+        background-color: #111;
+        border: 1px solid #222;
+        padding: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+
+        .linkIcon {
+            height: 1.2em;
+            width: auto;
+            vertical-align: sub;
+        }
+
+        .titleLink {
+            color: white;
+        }
+
+        .linkDescript {
+            color: gray;
+        }
+
+
+
+        &:hover {
+            background-color: #7f5af022;
+        }
+    }
+
+
+
+
+
+
+}

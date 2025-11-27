@@ -2,7 +2,6 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import '../styles/NavigationBar.scss';
 import SplitText from '../anims/SplitText.jsx';
-import { FaCode } from "react-icons/fa";
 
 const NavigationBar = () => {
   return (
