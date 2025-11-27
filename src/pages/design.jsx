@@ -5,7 +5,7 @@ import { FaPalette } from "react-icons/fa6";
 const Design = () => {
     return (
         <Container className="design-container">
-            <div className="d-flex gap-2">
+            <div className="d-flex gap-1">
                 <FaPalette size={28} className='iconTitle' />
                 <h3 className='titlePage'>Design & UI/UX</h3>
             </div>

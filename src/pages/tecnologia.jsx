@@ -1,10 +1,15 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import '../styles/selectedLinks.scss';
+import { IoHardwareChip } from "react-icons/io5";
 
 const Tecnologia = () => {
     return (
         <Container className="design-container">
-            <h3 className='titlePage'>Hardware & Tecnologia</h3>
+            <div className="d-flex gap-1">
+                <IoHardwareChip size={30} className='iconTitle' />
+                <h3 className='titlePage'>Hardware & Tecnologia</h3>
+            </div>
+
 
             <h5 className='subCategoria mt-0'>Montagem & Consumo</h5>
             <Row className='g-2'>
