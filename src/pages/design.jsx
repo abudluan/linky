@@ -38,6 +38,19 @@ const Design = () => {
                         </Card>
                     </a>
                 </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://baixarfavicon.com.br/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/design/baixarFavIcon.png" alt="Framer Logo" className="linkIcon" />
+                                Baixar Favicon
+                            </h5>
+
+                            <p className='linkDescript'>Como baixar o favicon de um site? Insira a URL no campo indicado e clique em 'Baixar'. O favicon será localizado automaticamente e disponibilizado para download.</p>
+                        </Card>
+                    </a>
+                </Col>
             </Row>
 
             <h5 className='subCategoria'>Cores & Paletas</h5>
