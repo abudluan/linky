@@ -27,27 +27,20 @@ const Games = () => {
                     </a>
                 </Col>
 
-
-            </Row>
-
-            <h5 className='subCategoria'>Imagens / Assets / Mockups</h5>
-            <Row className='g-2'>
                 <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://www.steamgriddb.com/' target='_blank' rel='noopener noreferrer'>
+                    <a href='https://www.airconsole.com/' target='_blank' rel='noopener noreferrer'>
                         <Card className='cardSelectedLink'>
                             <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/games/steamGriddb.png" alt="Framer Logo" className="linkIcon" />
-                                SteamGridDB
+                                <img src="src/assets/games/airConsole.png" alt="Framer Logo" className="linkIcon" />
+                                AirConsole
                             </h5>
 
                             <p className='linkDescript'>
-                                Baixe e compartilhe recursos personalizados de jogos e personalize sua biblioteca de jogos.
+                                Você vai encontrar mais de 140 jogos em nossa biblioteca - de corridas, esportes, co-op, quebra-cabeça, jogos de quiz e muitos mais! Use seu celular como controle.
                             </p>
                         </Card>
                     </a>
                 </Col>
-
-
             </Row>
         </Container>
     )

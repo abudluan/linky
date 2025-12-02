@@ -7,24 +7,12 @@ const Design = () => {
         <Container className="page-container">
             <div className="d-flex gap-1">
                 <FaPalette size={28} className='iconTitle' />
-                <h3 className='titlePage'>Design & UI/UX</h3>
+                <h3 className='titlePage'>Design & Imagens</h3>
             </div>
 
 
             <h5 className='subCategoria mt-0'>Ferramentas & Geradores</h5>
             <Row className='g-2'>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://www.framer.com/ai/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/design/framerIA.png" alt="Framer Logo" className="linkIcon" />
-                                Framer IA
-                            </h5>
-
-                            <p className='linkDescript'>Framer é a ferramenta de design para sites. Crie designs livremente, publique rapidamente e expanda com CMS, SEO, análises e muito mais. Comece gratuitamente.</p>
-                        </Card>
-                    </a >
-                </Col>
 
                 <Col xs={12} sm={6} md={4} lg={3}>
                     <a href='https://quickfavs.com/' target='_blank' rel='noopener noreferrer'>
@@ -82,6 +70,21 @@ const Design = () => {
 
                             <p className='linkDescript'>
                                 O painel perfeito. Gifs de 8 bits com um relógio, palavras de atalho e uma saudação. Pronto para ser sua página inicial!
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://www.steamgriddb.com/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/design/steamGriddb.png" alt="Framer Logo" className="linkIcon" />
+                                SteamGridDB
+                            </h5>
+
+                            <p className='linkDescript'>
+                                Baixe e compartilhe recursos personalizados de jogos e personalize sua biblioteca de jogos.
                             </p>
                         </Card>
                     </a>

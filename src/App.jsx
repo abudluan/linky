@@ -14,6 +14,7 @@ import Games from './pages/games.jsx';
 import Tecnologia from './pages/tecnologia.jsx';
 import Trabalho from './pages/trabalho.jsx';  
 import Curiosidades from './pages/curiosidades.jsx';
+import IA from './pages/ia.jsx';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path='/tecnologia' element={<Tecnologia />} />
             <Route path='/trabalho' element={<Trabalho />} />
             <Route path='/curiosidades' element={<Curiosidades/>} />
+            <Route path='/ia' element={<IA/>} />
           </Routes>
           <Footer />
         </Router>

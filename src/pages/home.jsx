@@ -7,6 +7,7 @@ import { RiGameFill } from "react-icons/ri";
 import { IoHardwareChip } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
 import { MdEmojiEmotions } from "react-icons/md";
+import { FaRobot } from "react-icons/fa";
 
 import { useNavigate } from 'react-router-dom';
 
@@ -20,7 +21,7 @@ const Home = () => {
                     <Col xs={6} md={3}>
                         <div onClick={() => navigate('/design')}>
                             <SpotlightCard className="cardHomeLink">
-                                <h5 className='titleLink'>Design & UI/UX</h5>
+                                <h5 className='titleLink'>Design & Imagens</h5>
                                 <FaPalette size={25} className='iconLink' />
                             </SpotlightCard>
                         </div>
@@ -76,6 +77,15 @@ const Home = () => {
                             <SpotlightCard className="cardHomeLink">
                                 <h5 className='titleLink'>Entretenimento & Curiosidades</h5>
                                 <MdEmojiEmotions size={25} className='iconLink' />
+                            </SpotlightCard>
+                        </div>
+                    </Col>
+
+                    <Col xs={6} md={3}>
+                        <div onClick={() => navigate('/ia')}>
+                            <SpotlightCard className="cardHomeLink">
+                                <h5 className='titleLink'>Inteligência Artificial</h5>
+                                <FaRobot size={25} className='iconLink' />
                             </SpotlightCard>
                         </div>
                     </Col>
