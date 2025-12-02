@@ -5,6 +5,9 @@ import { FaPalette, FaCode, FaGamepad } from "react-icons/fa6";
 import { FaTools } from "react-icons/fa";
 import { RiGameFill } from "react-icons/ri";
 import { IoHardwareChip } from "react-icons/io5";
+import { MdWork } from "react-icons/md";
+
+
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -55,6 +58,15 @@ const Home = () => {
                             <SpotlightCard className="cardHomeLink">
                                 <h5 className='titleLink'>Hardware & Tecnologia</h5>
                                 <IoHardwareChip size={25} className='iconLink' />
+                            </SpotlightCard>
+                        </div>
+                    </Col>
+
+                    <Col xs={6} md={3}>
+                        <div onClick={() => navigate('/trabalho')}>
+                            <SpotlightCard className="cardHomeLink">
+                                <h5 className='titleLink'>Produtividade & Trabalho</h5>
+                                <MdWork size={25} className='iconLink' />
                             </SpotlightCard>
                         </div>
                     </Col>

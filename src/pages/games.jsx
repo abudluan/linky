@@ -4,14 +4,33 @@ import { RiGameFill } from "react-icons/ri";
 
 const Games = () => {
     return (
-        <Container className="design-container">
+        <Container className="page-container">
             <div className="d-flex gap-1">
                 <RiGameFill size={30} className='iconTitle' />
                 <h3 className='titlePage'>Games</h3>
             </div>
 
+            <h5 className='subCategoria mt-0'>Jogos Online & Cloud Gaming</h5>
+            <Row className='g-2'>
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://www.spawnd.gg/pt' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/games/spawnd.png" alt="Framer Logo" className="linkIcon" />
+                                Spawnd Alpha
+                            </h5>
 
-            <h5 className='subCategoria mt-0'>Imagens / Assets / Mockups</h5>
+                            <p className='linkDescript'>
+                                Jogos de alta qualidade no seu navegador, sem instalações necessárias, tela cheia e livre de distrações. Jogue agora de graça.
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
+
+
+            </Row>
+
+            <h5 className='subCategoria'>Imagens / Assets / Mockups</h5>
             <Row className='g-2'>
                 <Col xs={12} sm={6} md={4} lg={3}>
                     <a href='https://www.steamgriddb.com/' target='_blank' rel='noopener noreferrer'>

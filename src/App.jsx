@@ -12,6 +12,7 @@ import Ferramentas from './pages/ferramentas.jsx';
 import Desenvolvimento from './pages/desenvolvimento.jsx';
 import Games from './pages/games.jsx';
 import Tecnologia from './pages/tecnologia.jsx';
+import Trabalho from './pages/trabalho.jsx';  
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path='/desenvolvimento' element={<Desenvolvimento />} />
             <Route path='/games' element={<Games />} />
             <Route path='/tecnologia' element={<Tecnologia />} />
+            <Route path='/trabalho' element={<Trabalho />} />
           </Routes>
           <Footer />
         </Router>

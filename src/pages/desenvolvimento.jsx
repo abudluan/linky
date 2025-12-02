@@ -4,7 +4,7 @@ import { FaCode } from "react-icons/fa6";
 
 const Desenvolvimento = () => {
     return (
-        <Container className="design-container">
+        <Container className="page-container">
             <div className="d-flex gap-1">
                 <FaCode size={30} className='iconTitle' />
                 <h3 className='titlePage'>Programação & Desenvolvimento</h3>
