@@ -68,6 +68,25 @@ const Design = () => {
                     </a>
                 </Col>
             </Row>
+
+
+            <h5 className='subCategoria'>Imagens & Wallpapers</h5>
+            <Row className='g-2'>
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://8bitdashboard.com/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/design/8bitDash.png" alt="Framer Logo" className="linkIcon" />
+                                8 Bit Dashboard
+                            </h5>
+
+                            <p className='linkDescript'>
+                                O painel perfeito. Gifs de 8 bits com um relógio, palavras de atalho e uma saudação. Pronto para ser sua página inicial!
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
+            </Row>
         </Container>
     )
 }

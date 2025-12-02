@@ -46,6 +46,23 @@ const Tecnologia = () => {
                         </Card>
                     </a>
                 </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://meupc.net/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/tecnologia/meuPC.png" alt="Framer Logo" className="linkIcon" />
+                                MEUPC.NET
+                            </h5>
+
+
+                            <p className='linkDescript'>
+                                Monte seu computador Gamer mais barato. Escolha cada componente e monte o PC perfeito para você, são milhares de peças disponíveis.
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
             </Row>
         </Container>
     )
