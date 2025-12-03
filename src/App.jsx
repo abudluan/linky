@@ -16,6 +16,7 @@ import Trabalho from './pages/trabalho.jsx';
 import Curiosidades from './pages/curiosidades.jsx';
 import IA from './pages/ia.jsx';
 import Estudo from './pages/estudo.jsx';
+import Wallpaper from './pages/wallpaper.jsx';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path='/curiosidades' element={<Curiosidades/>} />
             <Route path='/ia' element={<IA/>} />
             <Route path='/estudo' element={<Estudo/>} />
+            <Route path='/wallpaper' element={<Wallpaper/>} />
           </Routes>
           <Footer />
         </Router>

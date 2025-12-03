@@ -39,6 +39,32 @@ const Design = () => {
                         </Card>
                     </a>
                 </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://haikei.app/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/design/hankei.png" alt="Framer Logo" className="linkIcon" />
+                                Haikei
+                            </h5>
+
+                            <p className='linkDescript'>Uma ferramenta de design baseada na web para gerar ativos exclusivos de design SVG para sites, mídias sociais, postagens de blog, papéis de parede, cartazes e muito mais!</p>
+                        </Card>
+                    </a>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://www.shapedivider.app/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/design/shapeDivider.png" alt="Framer Logo" className="linkIcon" />
+                                Shape Divider App
+                            </h5>
+
+                            <p className='linkDescript'>Uma ferramenta gratuita para facilitar a exportação de divisores de forma em SVG. As formas são modelos prontos e são exportadas exatamente como foram criadas, podendo ser ajustadas depois no código do seu projeto.</p>
+                        </Card>
+                    </a>
+                </Col>
             </Row>
 
             <h5 className='subCategoria'>Cores & Paletas</h5>
@@ -58,38 +84,8 @@ const Design = () => {
             </Row>
 
 
-            <h5 className='subCategoria'>Imagens & Wallpapers</h5>
-            <Row className='g-2'>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://8bitdashboard.com/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/design/8bitDash.png" alt="Framer Logo" className="linkIcon" />
-                                8 Bit Dashboard
-                            </h5>
-
-                            <p className='linkDescript'>
-                                O painel perfeito. Gifs de 8 bits com um relógio, palavras de atalho e uma saudação. Pronto para ser sua página inicial!
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
-
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://www.steamgriddb.com/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/design/steamGriddb.png" alt="Framer Logo" className="linkIcon" />
-                                SteamGridDB
-                            </h5>
-
-                            <p className='linkDescript'>
-                                Baixe e compartilhe recursos personalizados de jogos e personalize sua biblioteca de jogos.
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
-            </Row>
+           
+            
         </Container>
     )
 }

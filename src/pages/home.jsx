@@ -9,6 +9,7 @@ import { MdWork } from "react-icons/md";
 import { MdEmojiEmotions } from "react-icons/md";
 import { FaRobot } from "react-icons/fa";
 import { FaBookOpen } from "react-icons/fa";
+import { LuWallpaper } from "react-icons/lu";
 
 import { useNavigate } from 'react-router-dom';
 
@@ -31,7 +32,7 @@ const Home = () => {
                     <Col xs={6} md={3}>
                         <div onClick={() => navigate('/ferramentas')}>
                             <SpotlightCard className="cardHomeLink">
-                                <h5 className='titleLink'>Ferramentas</h5>
+                                <h5 className='titleLink'>Ferramentas & Utilidades Online</h5>
                                 <FaTools size={25} className='iconLink' />
                             </SpotlightCard>
                         </div>
@@ -96,6 +97,15 @@ const Home = () => {
                             <SpotlightCard className="cardHomeLink">
                                 <h5 className='titleLink'>Educação & Estudo</h5>
                                 <FaBookOpen size={25} className='iconLink' />
+                            </SpotlightCard>
+                        </div>
+                    </Col>
+
+                    <Col xs={6} md={3}>
+                        <div onClick={() => navigate('/wallpaper')}>
+                            <SpotlightCard className="cardHomeLink">
+                                <h5 className='titleLink'>Wallpapers & Estilização</h5>
+                                <LuWallpaper size={25} className='iconLink' />
                             </SpotlightCard>
                         </div>
                     </Col>

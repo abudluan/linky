@@ -42,6 +42,24 @@ const Games = () => {
                     </a>
                 </Col>
             </Row>
+
+            <h5 className='subCategoria'>Imagens & Asstes</h5>
+            <Row className='g-2'>
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://www.steamgriddb.com/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/games/steamGriddb.png" alt="Framer Logo" className="linkIcon" />
+                                SteamGridDB
+                            </h5>
+
+                            <p className='linkDescript'>
+                                Baixe e compartilhe recursos personalizados de jogos e personalize sua biblioteca de jogos.
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
+            </Row>
         </Container>
     )
 }

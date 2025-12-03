@@ -10,7 +10,7 @@ const Curiosidades = () => {
                 <h3 className='titlePage'>Entretenimento & Curiosidades</h3>
             </div>
 
-            <h5 className='subCategoria mt-0'>Testes & Simuladores Divertidos</h5>
+            <h5 className='subCategoria mt-0'>Testes & Simuladores</h5>
             <Row className='g-2'>
                 <Col xs={12} sm={6} md={4} lg={3}>
                     <a href='https://www.death-clock.org/' target='_blank' rel='noopener noreferrer'>
@@ -40,6 +40,39 @@ const Curiosidades = () => {
 
                             <p className='linkDescript'>
                                 Uma enorme cena de animação com muitas referências a memes, jogos, filmes, séries, anime, grupos de música.
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
+            </Row>
+
+            <h5 className='subCategoria'>Experiências Interativas</h5>
+            <Row className='g-2'>
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://neal.fun/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/curiosidades/nealFun.png" alt="Framer Logo" className="linkIcon" />
+                                Neal.fun
+                            </h5>
+
+                            <p className='linkDescript'>
+                                Jogos, visualizações, interativos e outras coisas estranhas criadas por Neal Agarwal.
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://theuselessweb.com/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/curiosidades/uselessWeb.png" alt="Framer Logo" className="linkIcon" />
+                                The Useless Web
+                            </h5>
+
+                            <p className='linkDescript'>
+                                O botão perfeito para o entediado, ou aqueles que procuram encontrar sites aleatórios online!
                             </p>
                         </Card>
                     </a>
