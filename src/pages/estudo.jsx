@@ -21,7 +21,25 @@ const Estudo = () => {
                             </h5>
 
                             <p className='linkDescript'>
-                                Basta inserir seu problema de matemática e deixar a Cymath resolvê-lo para você passo a passo! 
+                                Basta inserir seu problema de matemática e deixar a Cymath resolvê-lo para você passo a passo!
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
+            </Row>
+
+            <h5 className='subCategoria mt-0'>Idomas</h5>
+            <Row className='g-2'>
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://www.lingohut.com/pt' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/estudo/lingoHunt.png" alt="Framer Logo" className="linkIcon" />
+                                LingoHunt
+                            </h5>
+
+                            <p className='linkDescript'>
+                                Aprenda um idioma estrangeiro por conta própria. Com LingoHut você pode aprender mais de 45 idiomas. Você aprenderá frases curtas e palavras que usa diariamente.
                             </p>
                         </Card>
                     </a>
