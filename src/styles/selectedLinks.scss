@@ -27,6 +27,40 @@
         border-bottom: 1px solid #7f5af0;
     }
 
+    .btnfiltro {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto; 
+        padding-bottom: 4px; 
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; 
+
+        &::-webkit-scrollbar {
+            display: none; 
+        }
+
+        .btn {
+            border-radius: 10px !important;
+            font-weight: 500;
+            border: 1px solid var(--filtro-border);
+            color: #6c63ff;
+            background: transparent;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+
+            &:hover {
+                background: rgba(108, 99, 255, 0.1);
+            }
+
+            &.activeFiltro {
+                background: #6c63ff;
+                color: white;
+            }
+        }
+    }
+
+
     .cardSelectedLink {
         height: 18em;
         background-color: var(--card-bg);

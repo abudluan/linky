@@ -27,9 +27,12 @@ html {
   --color-icon: #6b40ea;
   --title-page: #6b40ea;
   --title-subcategory: #111;
+  --filtro-border: #6b63ff46;
   --descript-card: rgb(60, 60, 60);
 
   --footer-text: rgb(70, 70, 70);
+
+
 }
 
 /* =============================
@@ -45,8 +48,10 @@ html {
 
   --color-icon: white;
   --title-page: white;
+  --filtro-border: #6b63ff3e;
   --title-subcategory: white;
   --descript-card: rgb(160, 160, 160);
+
 
   --footer-text: white;
 }

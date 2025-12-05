@@ -1,115 +1,107 @@
-import '../styles/selectedLinks.scss';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { useState } from "react";
+import { Container, Row, Col, Card, ButtonGroup, Button } from "react-bootstrap";
 import { MdEmojiEmotions } from "react-icons/md";
+import '../styles/selectedLinks.scss';
 
 const Curiosidades = () => {
+
+    const filtros = [
+        { id: "todos", label: "Todos" },
+        { id: "testes", label: "Testes & Simuladores" },
+        { id: "cultura-pop", label: "Cultura Pop & Memes" },
+        { id: "interativos", label: "Experiências Interativas" },
+    ];
+
+    const [filtroAtivo, setFiltroAtivo] = useState("todos");
+
+    const links = [
+        {
+            titulo: "The Death Clock",
+            url: "https://www.death-clock.org/",
+            img: "src/assets/curiosidades/deathClock.png",
+            descricao: "Nossa calculadora avançada de expectativa de vida irá prever sua data de morte com base em estilo de vida e localização.",
+            tags: ["testes"]
+        },
+        {
+            titulo: "Floor796",
+            url: "https://floor796.com/",
+            img: "src/assets/curiosidades/floor796.png",
+            descricao: "Uma enorme cena animada cheia de referências a memes, jogos, filmes e cultura pop.",
+            tags: ["cultura-pop"]
+        },
+        {
+            titulo: "Neal.fun",
+            url: "https://neal.fun/",
+            img: "src/assets/curiosidades/nealFun.png",
+            descricao: "Jogos, visualizações e experiências estranhas criadas por Neal Agarwal.",
+            tags: ["interativos"]
+        },
+        {
+            titulo: "The Useless Web",
+            url: "https://theuselessweb.com/",
+            img: "src/assets/curiosidades/uselessWeb.png",
+            descricao: "Um botão que te leva a sites aleatórios, estranhos e inúteis da internet.",
+            tags: ["interativos"]
+        },
+        {
+            titulo: "PointerPointer",
+            url: "https://pointerpointer.com/",
+            img: "src/assets/curiosidades/pointerPointer.jpg",
+            descricao: "Sempre mostra alguém apontando exatamente para onde está o seu mouse.",
+            tags: ["interativos"]
+        },
+        {
+            titulo: "Radio Garden",
+            url: "https://radio.garden",
+            img: "src/assets/curiosidades/radioGarden.png",
+            descricao: "Explore rádios do mundo todo girando o planeta em um globo 3D.",
+            tags: ["interativos"]
+        },
+    ];
+
+
+    const linksFiltrados = links.filter(link =>
+        filtroAtivo === "todos" || link.tags.includes(filtroAtivo)
+    );
+
     return (
         <Container className="page-container">
-            <div className="d-flex gap-1">
+
+            <div className="d-flex gap-1 mb-3">
                 <MdEmojiEmotions size={30} className='iconTitle' />
                 <h3 className='titlePage'>Entretenimento & Curiosidades</h3>
             </div>
 
-            <h5 className='subCategoria mt-0'>Testes & Simuladores</h5>
-            <Row className='g-2'>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://www.death-clock.org/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/curiosidades/deathClock.png" alt="Framer Logo" className="linkIcon" />
-                                The Death Clock
-                            </h5>
+            <div className="btnfiltro mb-4">
+                {filtros.map(f => (
+                    <Button
+                        key={f.id}
+                        className={filtroAtivo === f.id ? "activeFiltro" : ""}
+                        onClick={() => setFiltroAtivo(f.id)}
+                    >
+                        {f.label}
+                    </Button>
+                ))}
+            </div>
 
-                            <p className='linkDescript'>
-                                Nossa calculadora avançada de expectativa de vida irá prever com precisão sua data de morte para você, dependendo de onde você mora, quanto você fuma e seu estilo de vida.
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
+            <Row className="g-2">
+                {linksFiltrados.map((link, i) => (
+                    <Col key={i} xs={12} sm={6} md={4} lg={3}>
+                        <a href={link.url} target="_blank" rel="noopener noreferrer">
+                            <Card className="cardSelectedLink">
+                                <h5 className="titleLink d-flex align-items-center gap-2">
+                                    <img src={link.img} className="linkIcon" />
+                                    {link.titulo}
+                                </h5>
+                                <p className="linkDescript">{link.descricao}</p>
+                            </Card>
+                        </a>
+                    </Col>
+                ))}
             </Row>
 
-            <h5 className='subCategoria'>Cultura Pop & Memes</h5>
-            <Row className='g-2'>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://floor796.com/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/curiosidades/floor796.png" alt="Framer Logo" className="linkIcon" />
-                                Floor796
-                            </h5>
-
-                            <p className='linkDescript'>
-                                Uma enorme cena de animação com muitas referências a memes, jogos, filmes, séries, anime, grupos de música.
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
-            </Row>
-
-            <h5 className='subCategoria'>Experiências Interativas</h5>
-            <Row className='g-2'>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://neal.fun/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/curiosidades/nealFun.png" alt="Framer Logo" className="linkIcon" />
-                                Neal.fun
-                            </h5>
-
-                            <p className='linkDescript'>
-                                Jogos, visualizações, interativos e outras coisas estranhas criadas por Neal Agarwal.
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
-
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://theuselessweb.com/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/curiosidades/uselessWeb.png" alt="Framer Logo" className="linkIcon" />
-                                The Useless Web
-                            </h5>
-
-                            <p className='linkDescript'>
-                                O botão perfeito para o entediado, ou aqueles que procuram encontrar sites aleatórios online!
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
-
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://pointerpointer.com/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/curiosidades/pointerPointer.jpg" alt="Framer Logo" className="linkIcon" />
-                                Pointerpointer
-                            </h5>
-
-                            <p className='linkDescript'>
-                                Mostra sempre uma foto de alguém apontando exatamente para onde está o ponteiro do seu mouse. Simples, estranho e muito divertido.
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
-
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://radio.garden' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img src="src/assets/curiosidades/radioGarden.png" alt="Framer Logo" className="linkIcon" />
-                                Radio Garden
-                            </h5>
-
-                            <p className='linkDescript'>
-                                Um globo 3D onde você gira a Terra e ouve rádios ao vivo de qualquer país. Descubra música, línguas e culturas apenas navegando pelo mapa.
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
-            </Row>
         </Container>
     );
-}
+};
 
 export default Curiosidades;
