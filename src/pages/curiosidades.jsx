@@ -77,6 +77,36 @@ const Curiosidades = () => {
                         </Card>
                     </a>
                 </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://pointerpointer.com/' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/curiosidades/pointerPointer.jpg" alt="Framer Logo" className="linkIcon" />
+                                Pointerpointer
+                            </h5>
+
+                            <p className='linkDescript'>
+                                Mostra sempre uma foto de alguém apontando exatamente para onde está o ponteiro do seu mouse. Simples, estranho e muito divertido.
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
+
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='https://radio.garden' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/curiosidades/radioGarden.png" alt="Framer Logo" className="linkIcon" />
+                                Radio Garden
+                            </h5>
+
+                            <p className='linkDescript'>
+                                Um globo 3D onde você gira a Terra e ouve rádios ao vivo de qualquer país. Descubra música, línguas e culturas apenas navegando pelo mapa.
+                            </p>
+                        </Card>
+                    </a>
+                </Col>
             </Row>
         </Container>
     );

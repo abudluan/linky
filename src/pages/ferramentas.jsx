@@ -42,6 +42,22 @@ const Ferramentas = () => {
                     </a >
                 </Col>
             </Row>
+
+            <h5 className='subCategoria'>Comparação</h5>
+            <Row className='g-2'>
+                <Col xs={12} sm={6} md={4} lg={3}>
+                    <a href='hhttps://versus.com/br' target='_blank' rel='noopener noreferrer'>
+                        <Card className='cardSelectedLink'>
+                            <h5 className="titleLink d-flex align-items-center gap-2">
+                                <img src="src/assets/ferramentas/versus.png" alt="Framer Logo" className="linkIcon" />
+                                Versus
+                            </h5>
+
+                            <p className='linkDescript'>Versus é uma plataforma global de comparação com base em dados, abrangendo mais de 90 categorias. Compare smartphones, câmeras, fones de ouvido, e muito mais.</p>
+                        </Card>
+                    </a >
+                </Col>
+            </Row>
         </Container>
     )
 }
