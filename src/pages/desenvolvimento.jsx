@@ -1,101 +1,97 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import '../styles/selectedLinks.scss';
+import { useState } from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { FaCode } from "react-icons/fa6";
+import "../styles/selectedLinks.scss";
 
 const Desenvolvimento = () => {
-    return (
-        <Container className="page-container">
-            <div className="d-flex gap-1">
-                <FaCode size={30} className='iconTitle' />
-                <h3 className='titlePage'>Programação & Desenvolvimento</h3>
-            </div>
+  const filtros = [
+    { id: "todos", label: "Todos" },
+    { id: "bibliotecas", label: "Bibliotecas" },
+    { id: "estudos", label: "Estudos" },
+  ];
 
-            <h5 className='subCategoria mt-0'>Bibliotecas</h5>
-            <Row className='g-2'>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://reactbits.dev/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img
-                                    src="src/assets/desenvolvimento/reactBits.png"
-                                    alt="React Bits Logo"
-                                    className="linkIcon"
-                                />
-                                React Bits
-                            </h5>
+  const [filtroAtivo, setFiltroAtivo] = useState("todos");
 
-                            <p className='linkDescript'>
-                                Uma coleção de código aberto de componentes React de alta qualidade, animados, interativos e totalmente personalizáveis ​​para criar interfaces de usuário impressionantes e memoráveis.
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
-            </Row>
+  const links = [
+    {
+      titulo: "React Bits",
+      url: "https://reactbits.dev/",
+      img: "src/assets/desenvolvimento/reactBits.png",
+      descricao:
+        "Coleção de componentes React de alta qualidade, animados e customizáveis.",
+      categoria: "bibliotecas",
+    },
 
+    {
+      titulo: "Front-End Mentor",
+      url: "https://www.frontendmentor.io/",
+      img: "src/assets/desenvolvimento/frontEndMentor.png",
+      descricao:
+        "Construa projetos reais e melhore suas habilidades de front-end.",
+      categoria: "estudos",
+    },
 
-            <h5 className='subCategoria'>Estudos</h5>
-            <Row className='g-2'>
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://www.frontendmentor.io/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img
-                                    src="src/assets/desenvolvimento/frontEndMentor.png"
-                                    alt="React Bits Logo"
-                                    className="linkIcon"
-                                />
-                                Front-End Mentor
-                            </h5>
+    {
+      titulo: "QuickRef.ME",
+      url: "https://quickref.me/",
+      img: "src/assets/desenvolvimento/quickRefMe.png",
+      descricao:
+        "Busque cheatsheets e referências rápidas de várias linguagens.",
+      categoria: "estudos",
+    },
 
-                            <p className='linkDescript'>
-                                Melhore suas habilidades front-end construindo projetos reais. Resolva desafios de HTML, CSS e JavaScript do mundo real enquanto trabalha com projetos profissionais.
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
+    {
+      titulo: "Coddy",
+      url: "https://coddy.tech/",
+      img: "src/assets/desenvolvimento/coddyTech.png",
+      descricao:
+        "Aprenda programação de forma divertida com desafios diários.",
+      categoria: "estudos",
+    },
+  ];
 
+  const linksFiltrados = links.filter(
+    (item) => filtroAtivo === "todos" || item.categoria === filtroAtivo
+  );
 
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://quickref.me/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img
-                                    src="src/assets/desenvolvimento/quickRefMe.png"
-                                    alt="React Bits Logo"
-                                    className="linkIcon"
-                                />
-                                QuickRef.ME
-                            </h5>
+  return (
+    <Container className="page-container">
 
-                            <p className='linkDescript'>
-                                Encontre estruturas e sintaxes de diversas linguagens, como JavaScript, Go, C, HTML e até prompts para ChatGPT, além de banco de dados e várias outras ferramentas!
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
+      <div className="d-flex gap-1 mb-3">
+        <FaCode size={30} className="iconTitle" />
+        <h3 className="titlePage">Programação & Desenvolvimento</h3>
+      </div>
 
-                <Col xs={12} sm={6} md={4} lg={3}>
-                    <a href='https://coddy.tech/' target='_blank' rel='noopener noreferrer'>
-                        <Card className='cardSelectedLink'>
-                            <h5 className="titleLink d-flex align-items-center gap-2">
-                                <img
-                                    src="src/assets/desenvolvimento/coddyTech.png"
-                                    alt="React Bits Logo"
-                                    className="linkIcon"
-                                />
-                                Coddy
-                            </h5>
+      <div className="btnfiltro mb-4">
+        {filtros.map((f) => (
+          <Button
+            key={f.id}
+            className={filtroAtivo === f.id ? "activeFiltro" : ""}
+            onClick={() => setFiltroAtivo(f.id)}
+          >
+            {f.label}
+          </Button>
+        ))}
+      </div>
 
-                            <p className='linkDescript'>
-                                Aprenda código de uma maneira divertida e eficaz com o Coddy.Tech – aproveite o domínio de diversas linguagens de programação diariamente e crie habilidades com facilidade, tudo online!
-                            </p>
-                        </Card>
-                    </a>
-                </Col>
+      <Row className="g-2">
+        {linksFiltrados.map((link, index) => (
+          <Col key={index} xs={12} sm={6} md={4} lg={3}>
+            <a href={link.url} target="_blank" rel="noopener noreferrer">
+              <Card className="cardSelectedLink">
+                <h5 className="titleLink d-flex align-items-center gap-2">
+                  <img src={link.img} className="linkIcon" alt={link.titulo} />
+                  {link.titulo}
+                </h5>
 
-            </Row>
-        </Container>
-    )
-}
+                <p className="linkDescript">{link.descricao}</p>
+              </Card>
+            </a>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
+};
 
 export default Desenvolvimento;
